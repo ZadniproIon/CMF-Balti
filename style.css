@@ -57,7 +57,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 10px;
+    padding: 0 10px;
     /*box-shadow: ...;*/
     box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.1);
 }
@@ -104,7 +104,7 @@ body {
 }
 
 .navbar img {
-    width: 82px;
+    width: 60px;
     height: auto;
 }
 
@@ -168,7 +168,7 @@ body {
 
 .main-section-1 button {
     all: unset;
-    background-color: #FF5C5C;
+    background-color: #FF6B6B;
     color: white;
     border-radius: 10px;
     font-size: 1.5em;
@@ -271,3 +271,71 @@ body {
     color: #283B6A;
 }
 /* End of "Informatii utile" section */
+
+/* "Despre CMF" main page section */
+.despre-cmf-wrapper {
+    background-color: #283B6A;
+}
+
+.despre-cmf {
+
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    margin: 0 auto;
+    max-width: 1200px;
+
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    gap: 110px;
+}
+
+.despre-cmf .left-side {
+    max-width: 450px;
+}
+
+.despre-cmf .right-side {
+    max-width: 635px;
+}
+
+.despre-cmf p:first-child {
+    color: #FFDD33;
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 0;
+}
+
+.despre-cmf p {
+    color: white;
+    font-size: 1.25em;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.despre-cmf button {
+    all: unset;
+    color: white;
+    text-decoration: none;
+    background-color: #FF6B6B;
+    cursor: pointer;
+    padding: 1em 2em;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    display: block;
+    font-weight: bold;
+    margin: 60px auto 10px auto;
+}
+
+.despre-cmf img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* End of "Despre CMF" main page section */
