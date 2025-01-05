@@ -272,9 +272,48 @@ body {
 }
 /* End of "Informatii utile" section */
 
+
+/* Pill container */
+.pill-container {
+
+    margin: 2em;
+
+    background-color: #F7F9FC;
+    border: 1px solid rgba(176, 190, 197, 0.5);
+    border-radius: 4em;
+
+    max-width: fit-content;
+    width: 100%;
+    padding: 1.5em;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    margin: 2em auto;
+}
+
+.pill-container p {
+    font-size: 1em;
+    color:#2E3E5C;
+    text-align: justify;
+}
+
+.pill-container button {
+    all: unset;
+    background-color: #FF6B6B;
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+    font-size: 1em;
+    border-radius: 4em;
+}
+
 /* "Despre CMF" main page section */
 .despre-cmf-wrapper {
     background-color: #283B6A;
+    padding: 0.5em;
 }
 
 .despre-cmf {
@@ -289,6 +328,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap-reverse;
     
     gap: 110px;
 }
@@ -299,6 +339,12 @@ body {
 
 .despre-cmf .right-side {
     max-width: 635px;
+    height: 450px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .despre-cmf p:first-child {
@@ -307,7 +353,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 0;
+    line-height: 1;
 }
 
 .despre-cmf p {
@@ -315,6 +361,10 @@ body {
     font-size: 1.25em;
     text-align: justify;
     line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .despre-cmf button {
@@ -326,16 +376,41 @@ body {
     padding: 1em 2em;
     border-radius: 10px;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.25em;
     display: block;
     font-weight: bold;
-    margin: 60px auto 10px auto;
+    margin: 0 auto;
 }
 
 .despre-cmf img {
     width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 1350px) {
+    .despre-cmf {
+        gap: 5px;
+
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .despre-cmf .right-side {
+        max-width: 650px;
+    }
+
+    .despre-cmf .left-side {
+        max-width: 650px;
+    }
+
+    .despre-cmf {
+        gap: 2em;
+        padding: 1.25em;
+    }
+
+
+
 }
 
 /* End of "Despre CMF" main page section */
