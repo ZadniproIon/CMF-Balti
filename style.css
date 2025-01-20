@@ -123,6 +123,16 @@ body {
     background-color: #283B6A;
     color: white;   
 }
+
+@media (max-width: 1100px) {
+    .above-header {
+        display: none;
+    }
+    
+    .navbar .right-side {
+        display: none;
+    }
+}
 /* End of Nav bar */
 
 
@@ -137,23 +147,21 @@ body {
     border: 1px solid rgba(176, 190, 197, 0.5);
     border-radius: 40px;
     margin: 3em auto;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .main-section-1 .left-side, .main-section-1 .right-side {
     margin: 3em;
-
 }
 
 .main-section-1 .left-side {
     max-width: 28em;
 }
 
-
-
 .main-section-1 p {
     color: #2E3E5C;
     margin: 2em 0;
+    text-align: justify;
 }
 
 .main-section-1 p:first-child {
@@ -166,8 +174,10 @@ body {
     font-size: 1.25em;
 }
 
-.main-section-1 button {
+.main-section-1 a {
     all: unset;
+    display: block;
+    max-width: fit-content;
     background-color: #FF6B6B;
     color: white;
     border-radius: 10px;
@@ -175,48 +185,57 @@ body {
     cursor: pointer;
     padding: 1em 2em;
     font-weight: bold;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.main-section-1 a:hover {
+    background-color: #E65555; /* Hover color */
 }
 
 .main-section-1 img {
     border-radius: 1em;
     border: 1px solid rgba(176, 190, 197, 0.7);
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    object-fit: contain;
 }
 
-/* Media Query for Narrower Screens */
-@media (max-width: 1100px) {
-    .above-header {
-        display: none;
-    }
-    
-    .navbar .right-side {
-        display: none;
-    }
-
-    .main-section-1 {
-        flex-direction: column; /* Stack elements vertically */
-        padding: 1.5em; /* Reduce padding for smaller screens */
-    }
-
-    .main-section-1 .left-side, 
-    .main-section-1 .right-side {
-        margin: 0em 0; /* Reduce margin between items */
-    }
-
-    .main-section-1 .left-side {
-        margin-bottom: 1em;
-    }
-
-    .main-section-1 .right-side {
-        margin-bottom: 0;
+/* Remove space between elements */
+@media (max-width: 1000px) {
+    .main-section-1 .left-side, .main-section-1 .right-side {
+        
     }
 
     .main-section-1 img {
-        width: 100%; /* Ensure image scales for smaller screens */
         max-width: 400px;
     }
+}
 
-    /* Need to modify the padding of items around here
-    and test at different resolutions!!!*/
+/* Switch to portrait view*/
+@media (max-width: 860px) {
+    .main-section-1 {
+        flex-direction: column;
+    }
+
+    .main-section-1 .left-side {
+        margin-bottom: 0;
+    }
+
+    .main-section-1 .left-side p:first-child {
+        text-align: center;
+        margin-top: 0.25em;
+    }
+
+
+    .main-section-1 a {
+        margin: 0 auto;
+    }
+
+
 }
 /* End of "Programare online" section */
 
@@ -239,7 +258,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 5em;
+    gap: 6em;
 }
 
 .info-utile-containers > div {
@@ -249,7 +268,7 @@ body {
     padding: 2em;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 40px -15px rgba(0, 0, 0, 0.25);
 }
 
 .info-utile-containers p {
@@ -264,6 +283,8 @@ body {
     font-size: 1.25em;
     font-weight: normal;
     margin-bottom: 0;
+    width: 15rem;
+    margin: auto;
 }
 
 .info-utile .icon {
@@ -276,38 +297,42 @@ body {
 /* Pill container */
 .pill-container {
 
-    margin: 2em;
-
     background-color: #F7F9FC;
     border: 1px solid rgba(176, 190, 197, 0.5);
     border-radius: 4em;
 
     max-width: fit-content;
     width: 100%;
-    padding: 1.5em;
+    padding: 1.75em 2.5em;
 
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1em;
-    margin: 2em auto;
+    margin: 3em auto;
 }
 
 .pill-container p {
-    font-size: 1em;
+    font-size: 1.25em;
     color:#2E3E5C;
     text-align: justify;
 }
 
-.pill-container button {
-    all: unset;
+.pill-container a {
+    text-decoration: none;
     background-color: #FF6B6B;
     color: white;
     font-weight: bold;
-    padding: 1em;
+    padding: 1em 1.25em;
     font-size: 1em;
     border-radius: 4em;
+    font-size: 1.25em;
+    transition: background-color 0.3s ease;
+}
+
+.pill-container a:hover {
+    background-color: #E65555;
 }
 
 /* "Despre CMF" main page section */
@@ -367,7 +392,7 @@ body {
     padding-right: 1em;
 }
 
-.despre-cmf button {
+.despre-cmf a {
     all: unset;
     color: white;
     text-decoration: none;
