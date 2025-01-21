@@ -206,10 +206,6 @@ body {
 
 /* Remove space between elements */
 @media (max-width: 1000px) {
-    .main-section-1 .left-side, .main-section-1 .right-side {
-        
-    }
-
     .main-section-1 img {
         max-width: 400px;
     }
@@ -256,7 +252,7 @@ body {
 
 .info-utile-containers {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 6em;
 }
@@ -290,6 +286,13 @@ body {
 .info-utile .icon {
     font-size: 9em;
     color: #283B6A;
+}
+
+
+@media (max-width: 1400px) {
+    .info-utile-containers {
+        gap: 3em;
+    }
 }
 /* End of "Informatii utile" section */
 
@@ -335,6 +338,16 @@ body {
     background-color: #E65555;
 }
 
+
+/* top right bottom left*/
+@media (max-width: 550px) {
+    .pill-container {
+        padding: 1em 1em 1em 1.35em;
+    }
+}
+/* End of pill container */
+
+
 /* "Despre CMF" main page section */
 .despre-cmf-wrapper {
     background-color: #283B6A;
@@ -353,7 +366,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap-reverse;
+    flex-wrap: nowrap;
     
     gap: 110px;
 }
@@ -415,7 +428,7 @@ body {
 
 @media screen and (max-width: 1350px) {
     .despre-cmf {
-        gap: 5px;
+        gap: 0px;
 
     }
 }
@@ -430,12 +443,16 @@ body {
     }
 
     .despre-cmf {
-        gap: 2em;
+        gap: 0em;
         padding: 1.25em;
     }
+}
 
-
-
+/* Switching to column view*/
+@media screen and (max-width: 1050px) {
+    .despre-cmf {
+        flex-direction: column-reverse;
+    }
 }
 
 /* End of "Despre CMF" main page section */
