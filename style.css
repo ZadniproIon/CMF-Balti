@@ -133,6 +133,96 @@ body {
         display: none;
     }
 }
+
+/* Mobile menu */
+/* Made using ChatGPT */
+
+/* Hamburger icon */
+.hamburger {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1100;
+    position: relative;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Hamburger Bars */
+/* Consists of 3 lines */
+.hamburger span {
+    width: 100%;
+    height: 5px;
+    background: #2E3E5C;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+
+/* Mobile Menu (Hidden by Default) */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen on the right */
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    backdrop-filter: blur(10px);
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Active Class (Menu Slides In) */
+.mobile-menu.menu-open {
+    right: 0;
+}
+
+/* Mobile Menu Links */
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: #2E3E5C;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    color: #FF5C5C;
+}
+
+
+/* Disable scrolling when menu is open */
+body.menu-lock {
+    overflow: hidden;
+}
+
+/* Hide hamburger icon when the screen is not narrow enough */
+@media (min-width: 1100px) {
+    .hamburger {
+        display: none;
+    }
+}
+/* End of Mobile menu */
+
 /* End of Nav bar */
 
 
@@ -412,10 +502,10 @@ body {
     text-decoration: none;
     background-color: #FF6B6B;
     cursor: pointer;
-    padding: 1.25em 3em;
+    padding: 1em 2em;
     border-radius: 10px;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.5em;
     display: block;
     font-weight: bold;
     margin: 0 auto;
@@ -557,7 +647,7 @@ body {
     padding: 1em 1.5em;
     background-color: white;
     border-radius: 999px;
-    font-size: 1.25em;
+    font-size: 1.5em;
     color: #2E3E5C;
     white-space: nowrap;
     text-decoration: none;
