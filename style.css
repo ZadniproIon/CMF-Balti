@@ -47,6 +47,7 @@ body {
 .above-header .icon {
     font-size: 2.5em;
     margin: 10px;
+    color: white;
 }
 /* End of Above header */
 
@@ -521,6 +522,13 @@ body {
     
 }
 
+/* Because the text is too long, on narrower screens it goes out of bounds */
+@media screen and (max-width: 450px) {
+    .transparenta-section p:first-child {
+        font-size: 2.75em;
+    }
+}
+
 .transparenta-section p {
     color: white;
     font-size: 1.25em;
@@ -562,7 +570,7 @@ body {
 
 
 .pills a:hover {
-    background-color: black; /* Adjust this to one of the options */
+    background-color: #E65555;
     color: white; /* Ensures good contrast */
 }
 
@@ -619,12 +627,6 @@ body {
     max-width: 100%;
 }
 
-@media screen and (max-width: 1220px){
-    .parteneri-oficiali > div {
-        min-width: none;
-    }
-}
-
 .parteneri-oficiali p {
     text-align: center;
     color: #2E3E5C;
@@ -646,7 +648,7 @@ body {
 }
 
 .parteneri-oficiali a:hover {
-    background-color: black;
+    background-color: #E65555;
 }
 
 .parteneri-oficiali img {
@@ -662,6 +664,34 @@ body {
     align-items: center;
     width: 63%;
 }
+
+@media screen and (max-width: 650px) {
+
+    .parteneri-oficiali > div {
+        padding: 0em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        gap: 0em;
+        min-width: 100%;
+    }
+
+    .parteneri-oficiali p {
+        margin: 0;
+    }
+
+    .parteneri-oficiali .right-side {
+        gap: 1em;
+    }
+
+    .parteneri-oficiali img {
+        width: 150px;
+    }
+
+    .parteneri-oficiali .right-side {
+        width: 45%;
+    }
+}
+
 /* End of "Parteneri oficiali" section */
 
 
