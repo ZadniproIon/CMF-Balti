@@ -1,78 +1,30 @@
 <!DOCTYPE html>
 <html lang="ro">
     <head>
-        <title>Acasa - CMF Balti</title>
+        <title>Acasă - CMF Bălți</title>
         <link rel="icon" type="image/x-icon" href="/images/logo-cmf.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- Importing stuff -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles/index.css">
+        
         <script src="script.js"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+        <!-- Components: above-header, nav-bar, footer-->
+        <link rel="stylesheet" href="/components/components.css">
+        <script src="/components/loadComponents.js"></script>
+        <script src="/components/navbarMobileMenu.js"></script>
     </head>
     <body>
 
-        <!-- Above header section -->
-        <div class="above-header">
-            <div class="left-side">
-                <div class="above-header-container">
-                    <i class="fa-regular fa-clock icon"></i>
-                    <p>Luni - Vineri: 8:00 - 19:00<br>Sâmbătă: 8:00 - 13:00</p>
-                </div>
-
-                <div class="above-header-container">
-                    <i class="fa-solid fa-phone icon"></i>
-                    <p>(0231) 7-52-28</p>
-                </div>
-            </div>
-            <div class="right-side">
-                <div class="above-header-container">
-                    <a href="https://www.facebook.com/cmfbalti/" target="_blank"><i class="fa-brands fa-facebook icon"></i></a>
-                    <a href="https://www.youtube.com/@cmfbaltiimsp3451" target="_blank"><i class="fa-brands fa-youtube icon"></i></a>
-                </div>
-            </div>
-        </div>
-
+        <!-- Above header, imported from separate file -->
+        <div id="above-header-container"></div>
 
         <!-- Nav bar -->
-        <!-- Nav bar -->
-        <div class="navbar">
-            <a class="left-side" href="">
-                <img src="images/logo-cmf.png" alt="Logo-ul CMF Balti">
-                <p>Centrul Medicilor de<br>Familie mun. Bălți</p>
-            </a>
-
-            <div class="right-side">
-                <ul>
-                    <li><a href="" class="active">Acasă</a></li>
-                    <li><a href="">Despre CMF</a></li>
-                    <li><a href="">Informații pentru<br>beneficiari</a></li>
-                    <li><a href="">Transparență</a></li>
-                    <li><a href="">Contacte</a></li>
-                </ul>
-            </div>
-
-            <!-- Hamburger Button -->
-            <div class="hamburger" onclick="toggleMenu()">
-                <span class="line-1"></span>
-                <span class="line-2"></span>
-                <span class="line-3"></span>
-            </div>
-
-
-
-            <div class="mobile-menu">
-                <ul>
-                    <li><a href="" class="active">Acasă</a></li>
-                    <li><a href="">Despre CMF</a></li>
-                    <li><a href="">Informații pentru<br>beneficiari</a></li>
-                    <li><a href="">Transparență</a></li>
-                    <li><a href="">Contacte</a></li>
-                </ul>
-            </div>
-        </div>
-
+        <div id="navbar-container"></div>
 
         <!-- "Programare online" section -->
         <div class="main-section-1">
@@ -82,7 +34,7 @@
                 <a href="https://sia.amp.md/" target="_blank">Apasă aici!</a>
             </div>
             <div class="right-side">
-                <img src="images/programare_online_screen_1.png" alt="Programare online">
+                <img src="images/main-page/programare_online_screen_1.png" alt="Programare online">
             </div>
         </div>
 
@@ -170,7 +122,7 @@
 
                 <!-- Ministerul Sănătății -->
                 <div>
-                    <div class="left-side"><img src="/images/main-page/ms gov md.png"></div>
+                    <div class="left-side"><img src="/images/main-page/ms gov md.png" alt="Whatever"></div>
                     <div class="right-side">
                         <p>Ministerul Sănătății<br>al Republicii Moldova</p>
                         <a href="https://ms.gov.md/" target="_blank">ms.gov.md</a>
@@ -179,7 +131,7 @@
 
                 <!-- Compania Națională de Asigurări în Medicină -->
                 <div>
-                    <div class="left-side"><img src="/images/main-page/cnam.jpg"></div>
+                    <div class="left-side"><img src="/images/main-page/cnam.jpg" alt="Whatever"></div>
                     <div class="right-side">
                         <p>Compania Națională de<br>Asigurări în Medicină</p>
                         <a href="http://cnam.md/" target="_blank">cnam.md</a>
@@ -188,7 +140,7 @@
 
                 <!-- Primăria municipiului Bălți -->
                 <div>
-                    <div class="left-side"><img src="/images/main-page/primaria balti.jpg"></div>
+                    <div class="left-side"><img src="/images/main-page/primaria balti.jpg" alt="Whatever"></div>
                     <div class="right-side">
                         <p>Primăria<br>municipiului Bălți</p>
                         <a href="https://balti.md/" target="_blank">balti.md</a>
@@ -197,7 +149,7 @@
 
                 <!-- Compania Națională de Asigurări Medicale -->
                 <div>
-                    <div class="left-side"><img src="/images/main-page/cnas.png"></div>
+                    <div class="left-side"><img src="/images/main-page/cnas.png" alt="Whatever"></div>
                     <div class="right-side">
                         <p>Compania Națională<br>de Asigurări Medicale</p>
                         <a href="https://cnas.gov.md/" target="_blank">cnas.gov.md</a>
@@ -207,7 +159,9 @@
         </div>
         
 
-        <footer><p>Project made with ❤️ by <a href="https://github.com/ZadniproIon" target="_blank">Zadnipro Ion</a></p></footer>
+        <!-- Footer, imported from separate file -->
+        <div id="footer-container"></div>
+        
         
 
     </body>
