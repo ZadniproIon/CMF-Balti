@@ -162,7 +162,23 @@
         <!-- Footer, imported from separate file -->
         <div id="footer-container"></div>
         
+        <script>
+            function setActiveNavLink() {
+                let navItem = document.getElementById("nav-index");
+                let navItemMobile = document.getElementById("nav-index-mobile");
         
+                if (navItem) {
+                    navItem.classList.add("active");
+                    navItemMobile.classList.add("active");
+                    console.log("Class added successfully!");
+                } else {
+                    console.log("Navbar not found yet, retrying...");
+                    setTimeout(setActiveNavLink, 100); // Try again in 100ms
+                }
+            }
+        
+            document.addEventListener("DOMContentLoaded", setActiveNavLink);
+        </script>
 
     </body>
 </html>

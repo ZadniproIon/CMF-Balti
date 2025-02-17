@@ -15,8 +15,11 @@
 
         <!-- Components: above-header, nav-bar, footer-->
         <link rel="stylesheet" href="/components/components.css">
-        <script src="/components/loadComponents.js"></script>
-        <script src="/components/navbarMobileMenu.js"></script>
+        <script src="/components/loadComponents.js" defer></script>
+        <script src="/components/navbarMobileMenu.js" defer></script>
+
+        <link rel="stylesheet" href="/components/pill-container.css">
+        
     </head>
     <body>
 
@@ -166,11 +169,36 @@
 
         </div>
         
+        <!-- "Contacte" pill container -->
+        <div class="contact-container">
+            <div class="pill-container">
+                <p>Pentru mai multe detalii, vă rugăm să vizitați secțiunea</p>
+                <a href="">Contacte</a>
+            </div>
+        </div>
+        
 
         <!-- Footer, imported from separate file -->
         <div id="footer-container"></div>
-        
-        
 
+
+        <script>
+            function setActiveNavLink() {
+                let navItem = document.getElementById("nav-despre-cmf");
+                let navItemMobile = document.getElementById("nav-despre-cmf-mobile");
+        
+                if (navItem) {
+                    navItem.classList.add("active");
+                    navItemMobile.classList.add("active");
+                    console.log("Class added successfully!");
+                } else {
+                    console.log("Navbar not found yet, retrying...");
+                    setTimeout(setActiveNavLink, 100); // Try again in 100ms
+                }
+            }
+        
+            document.addEventListener("DOMContentLoaded", setActiveNavLink);
+        </script>
+        
     </body>
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Acasă - CMF Bălți</title>
+        <link rel="icon" type="image/x-icon" href="/images/logo-cmf.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Importing stuff -->
+        <link rel="stylesheet" href="styles/info-pentru-benficiari.css">
+        
+        <script src="script.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+        <!-- Components: above-header, nav-bar, footer-->
+        <link rel="stylesheet" href="/components/components.css">
+        <script src="/components/loadComponents.js" defer></script>
+        <script src="/components/navbarMobileMenu.js" defer></script>
+
+        <link rel="stylesheet" href="/components/pill-container.css">
+        
+    </head>
+    <body>
+
+        <!-- Above header, imported from separate file -->
+        <div id="above-header-container"></div>
+
+        <!-- Nav bar -->
+        <div id="navbar-container"></div>
+        
+
+        <!-- Quick select section -->
+        <div class="quick-select">
+            <p>Apasă butoanele pentru acces direct</p>
+            <div class="select-options">
+
+            </div>
+        </div>
+
+
+        
+        
+
+        <!-- Footer, imported from separate file -->
+        <div id="footer-container"></div>
+
+
+        <script>
+            function setActiveNavLink() {
+                let navItem = document.getElementById("nav-info-beneficiari");
+                let navItemMobile = document.getElementById("nav-info-beneficiari-mobile");
+        
+                if (navItem) {
+                    navItem.classList.add("active");
+                    navItemMobile.classList.add("active");
+                    console.log("Class added successfully!");
+                } else {
+                    console.log("Navbar not found yet, retrying...");
+                    setTimeout(setActiveNavLink, 100); // Try again in 100ms
+                }
+            }
+        
+            document.addEventListener("DOMContentLoaded", setActiveNavLink);
+        </script>
+        
+    </body>
+</html>
