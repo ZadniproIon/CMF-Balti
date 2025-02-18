@@ -14,11 +14,36 @@
     padding: 1.5em;
 }
 
-.section-text p, .section-text ul {
+.section-text p, .section-text ul, .section-text ol {
     text-align: justify;
     color: #283B6A;
     font-size: 1.5em;
     line-height: 1.25;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.block {
+    max-width: 1165px;
+    border: 1px solid rgba(176, 190, 197, 0.5);
+    color: #2E3E5C;
+    padding: 3em;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    box-shadow: 2px 2px 40px -15px rgba(0, 0, 0, 0.25);
+}
+
+.section-text .block-title {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+.list {
+    line-height: 1.5;
 }
