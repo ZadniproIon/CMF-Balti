@@ -47,3 +47,68 @@
 .list {
     line-height: 1.5;
 }
+
+
+
+
+/* "Tarife" section */
+.tarife {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4em;
+    margin: 4em auto;
+}
+
+
+.tarife-title-text {
+    font-size: 3em;
+    color: #2E3E5C;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.download-button-class {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4em;
+
+    justify-content: space-evenly;
+
+    max-width: 1166px;
+    margin: 0 auto;
+}
+
+
+.download-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+
+    max-width: fit-content;
+
+    color: white;
+    background-color: #FF6B6B;
+    padding: 0.25em 1em;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.download-button p, .fa-cloud-arrow-down {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.download-button:hover {
+    background-color: #E65555;
+    cursor: pointer;
+}
+
+.tarife .pill-container {
+    margin: 0;
+}
