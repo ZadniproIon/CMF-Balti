@@ -1,4 +1,8 @@
 /* "Programare online" section */
+.main-section-1-wrapper {
+    margin: 0 1.5em;
+}
+
 .main-section-1 {
     max-width: fit-content;
     display: flex;
@@ -450,7 +454,7 @@
 
 /* "Parteneri oficiali" section */
 .parteneri-oficiali-wrapper {
-    padding: 0.5em;
+    padding: 0.5em 1.5em;
     background-color: white;
     margin-top: 75px;
     margin-bottom: 75px;

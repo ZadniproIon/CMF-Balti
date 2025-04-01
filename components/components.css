@@ -9,7 +9,6 @@ body {
     padding: 0;
 }
 
-
 /* Above header */
 .above-header {
     background-color: #283B6A;
@@ -19,26 +18,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    box-sizing: border-box;
-    max-width: 100%;
-    margin: 0 auto;
+    padding: 0 1em;
+
+    height: 80px;
 }
 
 .above-header .left-side, .above-header .right-side {
     display: flex;
     align-items: center;
+    gap: 1.5em;
 }
 
 .above-header-container {
     display: flex;
     align-items: center;
-    margin-right: 30px;
-}
-
-
-.above-header-container:last-child {
-    margin-right: 0;
 }
 
 .above-header p {
@@ -46,10 +39,11 @@ body {
 }
 
 .above-header .icon {
-    font-size: 2.5em;
-    margin: 10px;
+    font-size: 2em;
+    margin: 15px;
     color: white;
 }
+
 
 @media (max-width: 700px) {
     .above-header {
@@ -64,8 +58,10 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 0 10px;
+    padding: 0 1em;
     box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.1);
+
+    height: 80px;
 }
 
 .navbar .left-side, .navbar .right-side {
@@ -90,8 +86,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .navbar li a {
@@ -102,11 +96,11 @@ body {
     padding: 1em;
     text-decoration: none;
     color: #2E3E5C;
-    margin: 10px;
+    margin: 5.6px;
     text-transform: uppercase;
     font-size: 1em;
     border-radius: 10px;
-    transition: background-color 0.3s ease, font-weight 1s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .navbar img {
