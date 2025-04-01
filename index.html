@@ -8,6 +8,7 @@
         
         <!-- Importing stuff -->
         <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="components/pill-container.css">
         
         <script src="script.js"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -64,10 +65,13 @@
             </div>
 
             <!-- "Contacte" pill container -->
-            <div class="pill-container">
-                <p>Pentru mai multe detalii, vă rugăm să vizitați secțiunea</p>
-                <a href="contacte.html">Contacte</a>
+            <div class="pill-container-wrapper">
+                <div class="pill-container">
+                    <p>Pentru mai multe detalii, vă rugăm să vizitați secțiunea</p>
+                    <a href="contacte.html">Contacte</a>
+                </div>
             </div>
+            
         </div>
 
 
@@ -111,9 +115,9 @@
                     <br>Această abordare deschisă ne ajută să gestionăm eficient resursele și să fim mereu la dispoziția comunității.</p>
                 
                 <div class="pills">
-                    <a href="#">Achiziții publice</a>
-                    <a href="#">Rapoarte de activitate</a>
-                    <a href="#">Contracte CNAM</a>
+                    <a href="transparenta.html#achizitii_publice">Achiziții publice</a>
+                    <a href="transparenta.html#rapoarte_de_activitate">Rapoarte de activitate</a>
+                    <a href="transparenta.html#contracte_cnam">Contracte CNAM</a>
                 </div>
             </div>
         </div>
@@ -182,6 +186,7 @@
         
             document.addEventListener("DOMContentLoaded", setActiveNavLink);
         </script>
+    
 
     </body>
 </html>

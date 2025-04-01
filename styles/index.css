@@ -103,7 +103,7 @@
 /* "Informatii utile" section */
 .info-utile {
     margin: 0 auto;
-    padding: 2em 1em;
+    padding: 2em 0.5em;
 }
 
 /* Title of the section */
@@ -163,6 +163,10 @@
 
 
 /* Pill container */
+.pill-container-wrapper {
+    margin: 0 1em;
+}
+/*
 .pill-container {
 
     background-color: #F7F9FC;
@@ -205,11 +209,13 @@
 
 
 /* top right bottom left*/
-@media (max-width: 550px) {
+
+/*@media (max-width: 550px) {
     .pill-container {
         padding: 1em 1em 1em 1.35em;
     }
 }
+*/
 /* End of pill container */
 
 

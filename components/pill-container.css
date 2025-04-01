@@ -51,7 +51,6 @@
     .pill-container {
 
         flex-direction: column;
-        margin: 0;
         
         padding: 1em 2em;
     }
