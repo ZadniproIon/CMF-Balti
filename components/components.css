@@ -11,8 +11,12 @@ body {
 
 
 /* Above header */
-.above-header {
+.above-header-wrapper {
     background-color: #283B6A;
+}
+
+.above-header {
+    
     color: #FFFFFF;
     font-size: 1em;
 
@@ -22,6 +26,8 @@ body {
     padding: 0 1em;
 
     height: 80px;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .above-header .left-side, .above-header .right-side {
@@ -54,15 +60,22 @@ body {
 /* End of Above header */
 
 /* Nav bar */
+.navbar-wrapper {
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    
     padding: 0 1em;
-    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.1);
+    
 
     height: 80px;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 
@@ -103,6 +116,7 @@ body {
     font-size: 1em;
     border-radius: 10px;
     transition: background-color 0.3s ease;
+    height: 70%;
 }
 
 .navbar img {
