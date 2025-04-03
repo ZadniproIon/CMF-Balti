@@ -91,3 +91,17 @@
 .tarife .pill-container {
     margin: 0;
 }
+
+.simple-link {
+    color: #2E3E5C;
+}
+
+
+.pill-container {
+    margin: 4.5em auto 0 auto;
+}
+
+.pill-container-wrapper {
+    padding: 0;
+    padding-top: 0;
+}

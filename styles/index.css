@@ -317,10 +317,6 @@
         gap: 3em;
     }
 
-    .content .image-side {
-        max-width: 650px;
-    }
-
     .content {
         gap: 1em;
         padding: 1.25em;
@@ -397,7 +393,10 @@
 /* Because the text is too long, on narrower screens it goes out of bounds */
 @media screen and (max-width: 450px) {
     .transparenta-section p:first-child {
-        font-size: 2.75em;
+        
+        word-break: break-word;
+        text-align: center;
+        hyphens: manual; /* important to allow &shy; to work */
     }
 }
 
@@ -564,4 +563,10 @@
     }
 }
 
+@media screen and (max-width: 450px) {
+    .parteneri-oficiali .right-side a {
+        font-size: 1.25em;
+        padding: 0.5em;
+    }
+}
 /* End of "Parteneri oficiali" section */

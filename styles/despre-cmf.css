@@ -96,4 +96,10 @@
 /* Add space between the pill container and the footer to match symetry*/
 .contact-container {
     padding-bottom: 2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+#programul-unic-link {
+    color: #2E3E5C;
 }
