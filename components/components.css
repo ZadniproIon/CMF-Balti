@@ -55,6 +55,11 @@ body {
 @media (max-width: 850px) {
     .above-header {
         display: none;
+        height: 0px;
+    }
+    .above-header-container {
+        height: 0px;
+        display: none;
     }
 }
 /* End of Above header */

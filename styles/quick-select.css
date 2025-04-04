@@ -7,6 +7,9 @@
     align-items: center;
     flex-direction: column;
     gap: 3em;
+
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 }
 
 .quick-select p {
@@ -40,8 +43,16 @@
     transition: background-color 0.3s ease;
 
 
-    min-width: 295px; /* Ensures equal width but keeps flexibility */
+    min-width: 250px; /* Ensures equal width but keeps flexibility */
     max-width: 100%;  /* Prevents it from overflowing */
+}
+
+@media screen and (max-width: 800px) {
+    .select-options a {
+        min-width: none;
+        width: 100%;
+        max-width: 360px;
+    }
 }
 
 .select-options a:hover {

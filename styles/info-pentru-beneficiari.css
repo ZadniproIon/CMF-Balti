@@ -1,3 +1,14 @@
+@media (max-width: 850px) {
+    .above-header {
+        display: none;
+        height: 0px;
+    }
+    .above-header-container {
+        height: 0px;
+        display: none;
+    }
+}
+
 .block {
     max-width: 1165px;
     border: 1px solid rgba(176, 190, 197, 0.5);
@@ -9,6 +20,13 @@
     flex-direction: column;
     gap: 2em;
     box-shadow: 2px 2px 40px -15px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 500px) {
+    .block {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
 }
 
 .section-text .block-title {
@@ -104,4 +122,10 @@
 .pill-container-wrapper {
     padding: 0;
     padding-top: 0;
+}
+
+@media screen and (max-width: 450px) {
+    #responsabilitatile_pacientului {
+        font-size: 2.5em; 
+    }
 }
