@@ -9,6 +9,14 @@
     }
 }
 
+@media screen and (max-width: 450px) {
+    #responsabilitatile_pacientului {
+        hyphens: manual;
+        word-break: normal;
+        text-align: center;
+    }    
+}
+
 .block {
     max-width: 1165px;
     border: 1px solid rgba(176, 190, 197, 0.5);
@@ -48,6 +56,15 @@
     gap: 3em;
 }
 
+#servicii-pill-container .pill-container {
+    margin-bottom: 4.5em;
+    
+}
+
+#servicii-pill-container {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
 
 /* "Tarife" section */
 .tarife {
@@ -57,6 +74,7 @@
     justify-content: space-between;
     gap: 4em;
     margin: 4em auto;
+    padding: 0 1.5em;
 }
 
 .tarife-title-text {
@@ -74,9 +92,9 @@
     flex-wrap: wrap;
     gap: 4em;
 
-    justify-content: space-evenly;
+    justify-content: center;
 
-    max-width: 1166px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -94,6 +112,8 @@
     padding: 0.25em 1em;
     border-radius: 10px;
     transition: background-color 0.3s ease;
+
+    text-decoration: none;
 }
 
 .download-button p, .fa-cloud-arrow-down {
@@ -114,18 +134,8 @@
     color: #2E3E5C;
 }
 
-
-.pill-container {
-    margin: 4.5em auto 0 auto;
-}
-
 .pill-container-wrapper {
     padding: 0;
     padding-top: 0;
 }
-
-@media screen and (max-width: 450px) {
-    #responsabilitatile_pacientului {
-        font-size: 2.5em; 
-    }
-}
+/* End of "Tarife" section */
