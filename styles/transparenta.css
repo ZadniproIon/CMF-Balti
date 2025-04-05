@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 2em;
+    padding: 1em;
 }
 
 .dropdown {
@@ -13,6 +14,11 @@
 
     border: 1px solid rgba(176, 190, 197, 0.5);
     box-shadow: 2px 2px 40px -15px rgba(0, 0, 0, 0.25);
+    
+    
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    user-select: none;
 }
 
 .dropdown-header {
@@ -32,22 +38,37 @@
 }
 
 .dropdown-content {
+    padding: 0 2em;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding-top 0.3s ease, padding-bottom 0.3s ease, gap 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0em;
+    border-top: 1px solid rgba(176, 190, 197, 0.5); /* Add this line */
 }
 
 .dropdown-content.show {
-    max-height: 1500px; /* Adjust based on content */
+    max-height: 1000px; /* Adjust based on content */
+    padding: 2em 2em;
+    gap: 2em;
+    opacity: 1;
 }
 
 
+/* idk what this is for
 .dropdown-content a {
     display: block;
     padding: 8px;
     text-decoration: none;
     color: black;
+    
 }
+*/
 
 .dropdown-content a:hover {
     background-color: #f1f1f1;
@@ -55,23 +76,23 @@
 
 
 /* For the pill containers, it was too much work to modify the original */
-/* Pill container */
+/* these WERE pill containers */
 .pill-container {
 
     background-color: #F7F9FC;
     border: 1px solid rgba(176, 190, 197, 0.5);
-    border-radius: 4em;
+    border-radius: 10px;
 
     max-width: 840px;
     
-    padding: 1.75em 0em;
+    padding: 1.75em 1em;
 
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 2em;
-    margin: 2em auto;
+    
 }
 
 .pill-container p {
@@ -88,7 +109,7 @@
     color: white;
     font-weight: bold;
     padding: 1em 1.25em;
-    border-radius: 4em;
+    border-radius: 10px;
     transition: background-color 0.3s ease;
 
     display: flex;
@@ -113,11 +134,12 @@
 }
 
 /* The pill container switches to a column view*/
-@media (max-width: 400px) {
+@media (max-width: 550px) {
     .pill-container {
 
         flex-direction: column;
-        margin: 0;
+        gap: 1em;
+        
         
         padding: 1em 2em;
     }
@@ -125,6 +147,7 @@
     .pill-container p {
         
         margin: 0;
+        width: 100%;
         text-align: center;
     }
 
