@@ -10,7 +10,7 @@
     width: 100%;
     margin: 0 auto;
     border-radius: 10px;
-    cursor: pointer;
+    
 
     border: 1px solid rgba(176, 190, 197, 0.5);
     box-shadow: 2px 2px 40px -15px rgba(0, 0, 0, 0.25);
@@ -30,6 +30,7 @@
     font-size: 1.5em;
     color: #2E3E5C;
     font-weight: bold;
+    cursor: pointer;
     
 }
 
@@ -38,7 +39,7 @@
 }
 
 .dropdown-content {
-    padding: 0 2em;
+    padding: 0 1em;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -48,13 +49,13 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 0em;
+    gap: 0.5em;
     border-top: 1px solid rgba(176, 190, 197, 0.5); /* Add this line */
 }
 
 .dropdown-content.show {
     max-height: 1000px; /* Adjust based on content */
-    padding: 2em 2em;
+    padding: 2em 1em;
     gap: 2em;
     opacity: 1;
 }
@@ -82,8 +83,7 @@
     background-color: #F7F9FC;
     border: 1px solid rgba(176, 190, 197, 0.5);
     border-radius: 10px;
-
-    max-width: 840px;
+    
     
     padding: 1.75em 1em;
 
@@ -91,9 +91,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2em;
-    
+    gap: 1em;
+
+    width: 100%;
+    max-width: 840px;
+    flex-wrap: nowrap; /* prevent breaking the layout */
 }
+
+
 
 .pill-container p {
     font-size: 1.25em;
@@ -101,14 +106,29 @@
     text-align: justify;
     text-align: center;
     width: 500px;
+
+    flex: 1;
+    margin: 0;
+    text-align: center;
+    min-width: 0;
 }
+
+/*
+@media (max-width: 900px) {
+    .pill-container p {
+        width: fit-content;
+        width: 100%;
+        max-width: fit-content;
+    }
+}
+*/
 
 .pill-container a {
     text-decoration: none;
     background-color: #FF6B6B;
     color: white;
     font-weight: bold;
-    padding: 1em 1.25em;
+    padding: 1em;
     border-radius: 10px;
     transition: background-color 0.3s ease;
 
@@ -119,18 +139,11 @@
     color: white;
     font-size: 1.25em;
     text-align: center;
+    
 }
 
 .pill-container a:hover {
     background-color: #E65555;
-}
-
-
-/* top right bottom left*/
-@media (max-width: 550px) {
-    .pill-container {
-        padding: 1em 1em 1em 1.35em;
-    }
 }
 
 /* The pill container switches to a column view*/
@@ -141,7 +154,7 @@
         gap: 1em;
         
         
-        padding: 1em 2em;
+        padding: 1em;
     }
 
     .pill-container p {
@@ -152,7 +165,7 @@
     }
 
     .pill-container a {
-        padding: 0.75em 1em;
+        padding: 1em;
     }
 }
 
