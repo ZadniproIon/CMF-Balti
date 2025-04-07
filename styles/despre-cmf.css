@@ -9,15 +9,21 @@
     font-weight: bold;
     color: #2E3E5C;
     margin: 1.75em 0 1.75em 0;
+    padding: 0 24px;
 }
 
+@media screen and (max-width: 500px) {
+    .title-of-page p {
+        font-size: 2.5em;
+    }
+}
 
 /* "Subdiviziunile IMSP „CMF mun. Bălți”" section */
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 1em;
+    padding: 1.5em;
     justify-content: center;
     justify-content: space-evenly;
     align-items: center;
@@ -50,9 +56,6 @@
 }
 
 @media screen and (max-width: 600px) {
-    .card-container {
-        padding: 0;
-    }
 
     .card {
         padding: 1.5em;
@@ -86,12 +89,36 @@
     margin: 0;
     font-size: 1.25em;
     text-align: center;
+    white-space: nowrap;
 }
 
 .line {
     color: rgba(46, 62, 92, 0.5);
 }
 
+@media screen and (max-width: 500px) {
+    .card {
+        flex: 1 1 300px; /* Grow, shrink, base width */
+        min-width: 250px; /* Prevent from getting too small */
+    }
+
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap; /* allows wrapping and shrinking */
+        gap: 2em;
+        justify-content: center;
+    }
+
+    .card img {
+        width: 100%;
+        max-width: 333px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+      
+      
+}
 
 /* Add space between the pill container and the footer to match symetry*/
 .contact-container {
